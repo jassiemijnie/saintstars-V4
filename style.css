@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-* {
+*, *::after, *::before {
     box-sizing: border-box;
 }
 
@@ -42,18 +42,12 @@ a {
 }
 
 img, video {
-    width: 100%;
-}
-
-video {
-    position: relative;
-    z-index: -1;
+    width: 100vw;
 }
 
 /* Header */
 
 header video {
-    background-color:#2600CD ;
     height: 100vh;
 }
 
@@ -88,6 +82,15 @@ header .button1 {
     margin: auto; padding: .25em;
     margin-top: 6%;
     font-size: .8em;
+    transition: .5s ease-out;
+    
+}
+
+.button1:hover {
+    background-color: white;
+    color: #2031D5;
+    border: solid #2031D5 1px;
+    transition: .5s ease-out;
 }
 
 header p {
@@ -103,6 +106,10 @@ header nav ul li {
     padding-right: 30px;
     font-weight: 100;
     font-size: 1.5em;
+}
+
+header nav ul li:hover {
+text-decoration: underline black 1px;
 }
 
 /* Container 1 - First timer en Amsterdam oud-zuid, gepositioneerd in web browser */
@@ -218,6 +225,14 @@ header nav ul li {
     margin: auto; padding: .5em;
     margin-top: 6%;
     color: white;
+    transition: .5s ease-out;
+}
+
+.button2:hover {
+    background-color: white;
+    color: #2031D5;
+    transition: ease-out;
+    border: solid #2031D5 1px;
 }
 
 #tribe {
@@ -309,7 +324,12 @@ header nav ul li {
     font-weight: 200;
     margin: 0;
     margin-bottom: 2em;
+}
 
+@media (max-width: 700px){
+    #container2 p {
+    display: none;
+    }
 }
 
 /* Container 3 - afbeelding met tekst */
@@ -368,6 +388,13 @@ header nav ul li {
     text-align: center;
 }
 
+#container3 .button3:hover {
+    transform-origin:left;
+    background-color: white;
+    color: #2031D5;
+    border: solid #2031D5 1px;
+}
+  
 /* Footer */
 
 footer { 
